@@ -1,0 +1,27 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Suite live connection" verbose="1" >
+    <test name="Api tests live connection" >
+        <groups>
+            <run>
+                <include name="liveConnection"></include>
+            </run>
+        </groups>
+
+        <classes>
+            <class name="com.score.apiTests.LiveConnectionTest" />
+        </classes>
+    </test>
+
+    <test name="Links 8880">
+        <parameter name="domen" value="https://777score.com"/>
+        <groups>
+            <run>
+                <include name="links8880"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.score.apiTests.LiveConnectionTest"/>
+        </classes>
+    </test>
+
+</suite>

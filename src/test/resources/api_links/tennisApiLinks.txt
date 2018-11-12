@@ -1,0 +1,17 @@
+/api/v1/tennis/categories/list
+/api/v1/tennis/category/ranking/list
+/api/v1/tennis/championships
+/api/v1/tennis/season/champions/2
+/api/v1/tennis/unique_tournament/atp/atp-gstaad-switzerland-men-singles-94
+/api/v1/tennis/tournaments/1673/season/32/calendar
+/api/v1/tennis/cups/1673/season/32/tree
+/api/v1/tennis/tournaments/1673/season/32/results
+/api/v1/tennis/tournaments/1673/season/32/today
+/api/v1/tennis/category/2/tournaments
+/api/v1/tennis/ranking/atp
+/api/v1/tennis/teams/2/matches
+/api/v1/tennis/tournaments/current
+/api/v1/tennis/matches/souza-joao-olavo-giustino-lorenzo-23-07-2017-125039
+/api/v1/tennis/matches/125039/headtohead
+/api/v1/tennis/teams/29159/results?page=1&limit=5
+/api/v1/tennis/teams/2085/schedules

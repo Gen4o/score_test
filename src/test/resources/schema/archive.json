@@ -1,0 +1,88 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "archive.json",
+  "type": "array",
+  "additionalItems": false,
+  "uniqueItems": true,
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "uniqueTournament": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "category": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "slug": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "slug"
+            ]
+          },
+          "id": {
+            "type": "integer"
+          },
+          "slug": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "category",
+          "id",
+          "slug"
+        ]
+      },
+      "tournaments": {
+        "type": "array",
+        "additionalItems": false,
+        "uniqueItems": true,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "slug": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id",
+            "name",
+            "slug"
+          ]
+        }
+      },
+      "currentTournament": {
+        "$ref":"#/items/properties/tournaments/items"
+      },
+      "id": {
+        "type": "integer"
+      },
+      "name": {
+        "type": "string"
+      },
+      "slug": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "uniqueTournament",
+      "tournaments",
+      "currentTournament",
+      "id",
+      "name",
+      "slug"
+    ]
+  }
+}

@@ -1,0 +1,285 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "team_players",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "playersList": {
+      "type": "array",
+      "additionalItems": false,
+      "uniqueItems": true,
+      "items": {
+        "anyOf": [
+          {
+            "type": "object",
+            "description":"player",
+            "additionalProperties": false,
+            "properties": {
+              "shirtNumber": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "statistic": {
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "totalMatches": {
+                    "type": [
+                      "integer",
+                      "null"
+                    ]
+                  },
+                  "substitutionsIn": {
+                    "type": [
+                      "integer",
+                      "null"
+                    ]
+                  },
+                  "minutesPlayed": {
+                    "type": [
+                      "integer",
+                      "null"
+                    ]
+                  },
+                  "yellowCardsForTeam": {
+                    "type": [
+                      "integer",
+                      "null"
+                    ]
+                  },
+                  "yellowCardsInTournament": {
+                    "type": [
+                      "integer",
+                      "null"
+                    ]
+                  },
+                  "yellowCardsTeamRanking": {
+                    "type": [
+                      "integer",
+                      "null"
+                    ]
+                  },
+                  "yellowCardsTournamentRanking": {
+                    "type": [
+                      "integer",
+                      "null"
+                    ]
+                  },
+                  "redCardsForTeam": {
+                    "type": [
+                      "integer",
+                      "null"
+                    ]
+                  },
+                  "redCardsInTournament": {
+                    "type": [
+                      "integer",
+                      "null"
+                    ]
+                  },
+                  "redCardsTeamRanking": {
+                    "type": [
+                      "integer",
+                      "null"
+                    ]
+                  },
+                  "redCardsTournamentRanking": {
+                    "type": [
+                      "integer",
+                      "null"
+                    ]
+                  },
+                  "yellowRedCardsForTeam": {
+                    "type": [
+                      "integer",
+                      "null"
+                    ]
+                  },
+                  "id": {
+                    "type": "integer"
+                  },
+                  "goalsForTeam": {
+                    "type": [
+                      "integer",
+                      "null"
+                    ]
+                  },
+                  "goalsInTournament": {
+                    "type": [
+                      "integer",
+                      "null"
+                    ]
+                  },
+                  "assistsForTeam": {
+                    "type": [
+                      "integer",
+                      "null"
+                    ]
+                  },
+                  "assistsInTournament": {
+                    "type": [
+                      "integer",
+                      "null"
+                    ]
+                  }
+                },
+                "required": [
+                  "totalMatches",
+                  "substitutionsIn",
+                  "minutesPlayed",
+                  "yellowCardsForTeam",
+                  "yellowCardsInTournament",
+                  "yellowCardsTeamRanking",
+                  "yellowCardsTournamentRanking",
+                  "redCardsForTeam",
+                  "redCardsInTournament",
+                  "redCardsTeamRanking",
+                  "redCardsTournamentRanking",
+                  "yellowRedCardsForTeam",
+                  "id",
+                  "goalsForTeam",
+                  "goalsInTournament",
+                  "assistsForTeam",
+                  "assistsInTournament"
+                ]
+              },
+              "age": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "logo": {
+                "type": [
+                  "null",
+                  "boolean"
+                ]
+              },
+              "id": {
+                "type": "integer"
+              },
+              "name": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "position": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "dateOfBirth": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "nationality": {
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "id": {
+                    "type": "integer"
+                  },
+                  "iso": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "id",
+                  "iso",
+                  "name"
+                ]
+              },
+              "slug": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "shirtNumber",
+              "statistic",
+              "age",
+              "logo",
+              "id",
+              "name",
+              "position",
+              "dateOfBirth",
+              "nationality",
+              "slug"
+            ]
+          },
+          {
+            "type": ["object","null"],
+            "description" : "manager",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "name": {
+                "type": "string"
+              },
+              "dateOfBirth": {
+                "type": "string"
+              },
+              "nationality": {
+                "type": ["null","string"]
+              },
+              "position": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "name",
+              "dateOfBirth",
+              "nationality",
+              "position"
+            ]
+          }
+        ]
+      }},
+      "season": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          },
+          "year": {
+            "type": "string"
+          },
+          "slug": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "year",
+          "slug"
+        ]
+      }
+    },
+    "required": [
+      "playersList",
+      "season"
+    ]
+  }

@@ -1,0 +1,66 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$id": "team scheama",
+  "$description" : " general team schema",
+  "team":{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "$id": "/properties/id",
+      "type": "null"
+    },
+    "betradarId": {
+      "$id": "/properties/betradarId",
+      "type": ["integer","null"]
+    },
+    "name": {
+      "$id": "/properties/name",
+      "type": "string"
+    },
+    "shortName": {
+      "$id": "/properties/shortName",
+      "type": "string"
+    },
+    "country": {
+      "$id": "/properties/country",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "$id": "/properties/country/properties/id",
+          "type": "integer"
+        },
+        "iso": {
+          "$id": "/properties/country/properties/iso",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "iso"
+      ]
+    },
+    "logo": {
+      "$id": "/properties/logo",
+      "type": "boolean"
+    },
+    "slug": {
+      "$id": "/properties/slug",
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "betradarId",
+    "name",
+    "shortName",
+    "country",
+    "logo",
+    "slug",
+    "numId"
+
+
+  ]
+}
+}

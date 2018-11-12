@@ -1,0 +1,261 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "matchesH2H.json",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "faceToFaceMatches": {
+      "type": "array",
+      "additionalItems": false,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "tournament": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "name": {
+                "type": "string"
+              },
+              "slug": {
+                "type": "string"
+              },
+              "uniqueTournament": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "id": {
+                    "type": "integer"
+                  },
+                  "slug": {
+                    "type": "string"
+                  },
+                  "logo": {
+                    "type": "boolean"
+                  },
+                  "category": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "country": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                          "iso": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "iso"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "country"
+                    ]
+                  }
+                },
+                "required": [
+                  "id",
+                  "slug",
+                  "logo",
+                  "category"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "name",
+              "slug",
+              "uniqueTournament"
+            ]
+          },
+          "season": {
+            "type": ["object","null"],
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "slug": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "slug"
+            ]
+          },
+          "ht": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "homeTeam": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "betradarId": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "name": {
+                "type": "string"
+              },
+              "shortName": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "logo": {
+                "type": "boolean"
+              },
+              "slug": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "betradarId",
+              "name",
+              "shortName",
+              "logo",
+              "slug"
+            ]
+          },
+          "awayTeam": {
+            "$ref": "#/properties/faceToFaceMatches/items/properties/homeTeam"
+          },
+          "cupBlock": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "cupRound": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "description": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "description"
+                ]
+              }
+            },
+            "required": [
+              "cupRound"
+            ]
+          },
+          "id": {
+            "type": "integer"
+          },
+          "dateOfMatch": {
+            "type": "string"
+          },
+          "roundNumber": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "comment": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "ft": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "final": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "ot": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "slug": {
+            "type": "string"
+          },
+          "s": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "tournament",
+          "season",
+          "ht",
+          "homeTeam",
+          "awayTeam",
+          "cupBlock",
+          "id",
+          "dateOfMatch",
+          "roundNumber",
+          "comment",
+          "ft",
+          "final",
+          "ot",
+          "slug",
+          "s"
+        ]
+      }
+    },
+    "homeTeamMatches": {
+      "$ref": "#/properties/faceToFaceMatches"
+    },
+    "awayTeamMatches": {
+      "$ref": "#/properties/faceToFaceMatches"
+    },
+    "faceToFaceStats": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "homeWins": {
+          "type": "integer"
+        },
+        "awayWins": {
+          "type": "integer"
+        },
+        "draws": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "homeWins",
+        "awayWins",
+        "draws"
+      ]
+    }
+    },
+    "required": [
+      "faceToFaceMatches",
+      "homeTeamMatches",
+      "awayTeamMatches",
+      "faceToFaceStats"
+    ]
+  }

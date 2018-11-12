@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Suite API response smoke tests" verbose="1" >
+    <suite-files>
+        <suite-file path="prod/prod-api-response-en.xml"></suite-file>
+        <suite-file path="prod/prod-api-response-ru.xml"></suite-file>
+        <suite-file path="prod/prod-api-response-tr.xml"></suite-file>
+        <suite-file path="live-connection.xml"></suite-file>
+    </suite-files>
+</suite>

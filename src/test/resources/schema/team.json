@@ -1,0 +1,64 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "team_info",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "betradarId": {
+      "type": ["integer","null"]
+    },
+    "name": {
+      "type": "string"
+    },
+    "shortName": {
+      "type": ["string","null"]
+    },
+    "country": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "iso": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "alias": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "iso",
+        "name",
+        "alias"
+      ]
+    },
+    "logo": {
+      "type": ["null","boolean"]
+    },
+    "slug": {
+      "type": "string"
+    },
+    "seoTextValue": {
+      "type": ["null","string"]
+    }
+  },
+  "required": [
+    "id",
+    "betradarId",
+    "name",
+    "shortName",
+    "country",
+    "logo",
+    "slug",
+    "seoTextValue"
+  ]
+}

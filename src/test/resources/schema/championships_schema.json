@@ -1,0 +1,71 @@
+{
+     "$schema": "http://json-schema.org/draft-04/schema#",
+     "definitions": {},
+     "id": "https://777score.com/api/v1/football/championships",
+     "items": {
+         "id": "/items",
+         "properties": {
+             "uniqueTournament": {
+                 "id": "/items/properties/uniqueTournament",
+                 "properties": {
+                     "category": {
+                         "id": "/items/properties/uniqueTournament/properties/category",
+                         "properties": {
+                             "country": {
+                                 "id": "/items/properties/uniqueTournament/properties/category/properties/country",
+                                 "properties": {
+                                     "iso": {
+                                         "id": "/items/properties/uniqueTournament/properties/category/properties/country/properties/iso",
+                                         "title": "The iso schema",
+                                         "type": "string"
+                                       }
+                                   },
+                                 "required": [
+                                     "iso"
+                                   ],
+                                 "type": "object"
+                               },
+                             "slug": {
+                                 "id": "/items/properties/uniqueTournament/properties/category/properties/slug",
+                                 "title": "The slug schema",
+                                 "type": "string"
+                               }
+                           },
+                         "required": [
+                             "country",
+                             "slug"
+                           ],
+                         "type": "object"
+                       },
+                     "id": {
+                         "default": 2,
+                         "title": "The id schema",
+                         "type": "integer"
+                       },
+                     "name": {
+                         "default": "Premier League",
+                         "title": "The name schema",
+                         "type": "string"
+                       },
+                     "slug": {
+                         "id": "/items/properties/uniqueTournament/properties/slug",
+                         "title": "The slug schema",
+                         "type": "string"
+                       }
+                   },
+                 "required": [
+                     "category",
+                     "slug",
+                     "id",
+                     "name"
+                   ],
+                 "type": "object"
+               }
+           },
+         "required": [
+             "uniqueTournament"
+           ],
+         "type": "object"
+       },
+     "type": "array"
+   }

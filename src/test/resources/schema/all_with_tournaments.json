@@ -1,0 +1,67 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "all_with_tournaments.json",
+  "type": "array",
+  "additionalItems": false,
+  "uniqueItems": true,
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "uniqueTournaments": {
+        "type": "array",
+        "additionalItems": false,
+        "uniqueItems": true,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "slug": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id",
+            "name",
+            "slug"
+          ]
+        }
+      },
+      "id": {
+        "type": "integer"
+      },
+      "name": {
+        "type": "string"
+      },
+      "country": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "iso": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "iso"
+        ]
+      },
+      "slug": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "uniqueTournaments",
+      "id",
+      "name",
+      "country",
+      "slug"
+    ]
+  }
+}

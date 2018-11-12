@@ -1,0 +1,163 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "additionalProperties": false,
+  "id": "https://777score.com/api/v1/football/tournaments/2/season/3644/formtable",
+  "properties": {
+    "formTable": {
+      "items": [
+        {
+          "additionalProperties": false,
+          "properties": {
+            "changes": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "draw": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "goalDiff": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "goalsAgainst": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "goalsFor": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "goalsTotal": {
+              "type": "string"
+            },
+            "loss": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "matches": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "matches_count": {
+              "type": "integer"
+            },
+            "points": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "position": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "resultType": {
+              "type": "string"
+            },
+            "sortPosition": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "team": {
+              "additionalProperties": false,
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "slug": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "slug",
+                "id",
+                "name"
+              ],
+              "type": "object"
+            },
+            "type": {
+              "type": "string"
+            },
+            "win": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "tournamentId": {
+              "type":
+                "integer"
+            },
+            "tournamentName": {
+              "type":
+              "string"
+            },
+            "isGroup": {
+              "type":
+              "boolean"
+            }
+          },
+          "required": [
+            "tournamentName",
+            "isGroup",
+            "tournamentId",
+            "loss",
+            "draw",
+            "goalsTotal",
+            "matches",
+            "changes",
+            "team",
+            "resultType",
+            "points",
+            "goalsAgainst",
+            "sortPosition",
+            "goalDiff",
+            "position",
+            "matches_count",
+            "win",
+            "type",
+            "goalsFor"
+          ],
+          "type": "object"
+        }
+      ],
+      "type": "array"
+    },
+    "futureMatches": {
+
+      "type": ["object","null"]
+},
+    "lastMatches": {
+
+      "type": ["object","null"]
+    }
+  },
+  "required": [
+    "futureMatches",
+    "lastMatches",
+    "formTable"
+  ],
+  "type": ["object","null"]
+}

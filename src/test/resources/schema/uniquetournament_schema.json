@@ -1,0 +1,247 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "additionalProperties": false,
+  "id": "https://777score.com/api/v1/football/unique_tournament/england/premier-league-2",
+  "properties": {
+    "season": {
+      "additionalProperties": false,
+      "id": "/properties/season",
+      "properties": {
+        "current": {
+          "id": "/properties/season/properties/current",
+          "type": "boolean"
+        },
+        "id": {
+          "id": "/properties/season/properties/id",
+          "type": "integer"
+        },
+        "name": {
+          "id": "/properties/season/properties/name",
+          "type": "string"
+        },
+        "slug": {
+          "id": "/properties/season/properties/slug",
+          "type": "string"
+        },
+        "year": {
+          "id": "/properties/season/properties/year",
+          "type": "string"
+        }
+      },
+      "required": [
+        "current",
+        "slug",
+        "year",
+        "id",
+        "name"
+      ],
+      "type": "object"
+    },
+    "tabsData": {
+      "additionalProperties": false,
+      "id": "/properties/tabsData",
+      "properties": {
+        "archive": {
+          "id": "/properties/tabsData/properties/archive",
+          "type": "boolean"
+        },
+        "cupTree": {
+          "id": "/properties/tabsData/properties/cupTree",
+          "type": "boolean"
+        },
+        "goalscorers": {
+          "id": "/properties/tabsData/properties/goalscorers",
+          "type": "boolean"
+        },
+        "leagueTable": {
+          "id": "/properties/tabsData/properties/leagueTable",
+          "type": "boolean"
+        },
+        "results": {
+          "id": "/properties/tabsData/properties/results",
+          "type": "boolean"
+        },
+        "schedule": {
+          "id": "/properties/tabsData/properties/schedule",
+          "type": "boolean"
+        },
+        "teams": {
+          "id": "/properties/tabsData/properties/teams",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "cupTree",
+        "schedule",
+        "results",
+        "leagueTable",
+        "teams",
+        "archive",
+        "goalscorers"
+      ],
+      "type": "object"
+    },
+    "tournaments": {
+      "id": "/properties/tournaments",
+      "items": {
+        "additionalProperties": false,
+        "id": "/properties/tournaments/items",
+        "properties": {
+          "active": {
+            "id": "/properties/tournaments/items/properties/active",
+            "type": "boolean"
+          },
+          "id": {
+            "id": "/properties/tournaments/items/properties/id",
+            "type": "integer"
+          },
+          "name": {
+            "id": "/properties/tournaments/items/properties/name",
+            "type": "string"
+          },
+          "slug": {
+            "id": "/properties/tournaments/items/properties/slug",
+            "type": "string"
+          },
+          "tournamentType": {
+            "id": "/properties/tournaments/items/properties/tournamentType",
+            "type": "string"
+          },
+          "type": {
+            "id": "/properties/tournaments/items/properties/type",
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "tournamentType",
+          "id",
+          "active",
+          "type",
+          "slug"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "uniqueTournaments": {
+      "id": "/properties/uniqueTournaments",
+      "items": {
+        "additionalProperties": false,
+        "id": "/properties/uniqueTournaments/items",
+        "properties": {
+          "active": {
+            "id": "/properties/uniqueTournaments/items/properties/active",
+            "type": "boolean"
+          },
+          "category": {
+            "additionalProperties": false,
+            "id": "/properties/uniqueTournaments/items/properties/category",
+            "properties": {
+              "country": {
+                "additionalProperties": false,
+                "id": "/properties/uniqueTournaments/items/properties/category/properties/country",
+                "properties": {
+                  "alias": {
+                    "id": "/properties/uniqueTournaments/items/properties/category/properties/country/properties/alias",
+                    "type": "string"
+                  },
+                  "id": {
+                    "id": "/properties/uniqueTournaments/items/properties/category/properties/country/properties/id",
+                    "type": "integer"
+                  },
+                  "iso": {
+                    "id": "/properties/uniqueTournaments/items/properties/category/properties/country/properties/iso",
+                    "type": "string"
+                  },
+                  "name": {
+                    "id": "/properties/uniqueTournaments/items/properties/category/properties/country/properties/name",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "alias",
+                  "iso",
+                  "id",
+                  "name"
+                ],
+                "type": "object"
+              },
+              "id": {
+                "id": "/properties/uniqueTournaments/items/properties/category/properties/id",
+                "type": "integer"
+              },
+              "name": {
+                "id": "/properties/uniqueTournaments/items/properties/category/properties/name",
+                "type": "string"
+              },
+              "slug": {
+                "id": "/properties/uniqueTournaments/items/properties/category/properties/slug",
+                "type": "string"
+              }
+            },
+            "required": [
+              "country",
+              "slug",
+              "id",
+              "name"
+            ],
+            "type": "object"
+          },
+          "complex": {
+            "id": "/properties/uniqueTournaments/items/properties/complex",
+            "type": "boolean"
+          },
+          "friendly": {
+            "id": "/properties/uniqueTournaments/items/properties/friendly",
+            "type": "boolean"
+          },
+          "id": {
+            "id": "/properties/uniqueTournaments/items/properties/id",
+            "type": "integer"
+          },
+          "international": {
+            "id": "/properties/uniqueTournaments/items/properties/international",
+            "type": "boolean"
+          },
+          "name": {
+            "id": "/properties/uniqueTournaments/items/properties/name",
+            "type": "string"
+          },
+          "slug": {
+            "id": "/properties/uniqueTournaments/items/properties/slug",
+            "type": "string"
+          },
+          "seoTextValue": {
+            "id": "/properties/uniqueTournaments/items/properties/seoTextValue",
+            "type": ["string","null"]
+          },
+          "logo": {
+            "id": "/properties/uniqueTournaments/items/properties/logo",
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "category",
+          "slug",
+          "name",
+          "id",
+          "complex",
+          "active",
+          "international",
+          "friendly",
+          "logo"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "season",
+    "tournaments",
+    "tabsData",
+    "uniqueTournaments"
+  ],
+  "type": "object"
+}

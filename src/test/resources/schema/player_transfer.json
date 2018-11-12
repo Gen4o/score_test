@@ -1,0 +1,70 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "player_transfer.json",
+  "type": "array",
+  "additionalItems": false,
+  "uniqueItems": true,
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "startDate": {
+        "type": ["string","null"]
+      },
+      "transferRoleType": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "fromTeam": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "betradarId": {
+            "type": ["integer","null"]
+          },
+          "name": {
+            "type": "string"
+          },
+          "shortName": {
+            "type": ["string","null"]
+          },
+          "logo": {
+            "type": "boolean"
+          },
+          "slug": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "betradarId",
+          "name",
+          "shortName",
+          "logo",
+          "slug"
+        ]
+      },
+      "toTeam": {
+        "$ref":"#/items/properties/fromTeam"
+      }
+    },
+    "required": [
+      "startDate",
+      "transferRoleType",
+      "fromTeam",
+      "toTeam"
+    ]
+  }
+}

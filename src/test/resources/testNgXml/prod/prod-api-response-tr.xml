@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Suite regression api TR domen" verbose="1" >
+    <test name="Api tests prod tr" >
+        <parameter name="domen" value="https://skorexpress.com"/>
+        <classes>
+            <class name="com.score.apiTests.ApiTest777Football"/>
+            <class name="com.score.apiTests.ApiTest777Basketball"/>
+            <class name="com.score.apiTests.ApiTest777Tennis"/>
+            <class name="com.score.apiTests.ApiTest777Hockey" />
+        </classes>
+    </test>
+
+    <test name="777score pages prod tr" >
+        <parameter name="domen" value="https://skorexpress.com"/>
+        <classes>
+            <class name="com.score.apiTests.Pages777scoreTest"/>
+        </classes>
+    </test>
+</suite>
+

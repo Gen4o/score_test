@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Suite beta pages EN domen" verbose="1" >
+    <test name="ApiTests BetaEn" >
+        <parameter name="domen" value="https://beta.777score.com"/>
+        <parameter name="login" value="mobileuser"></parameter>
+        <parameter name="password" value="12345"></parameter>
+        <classes>
+            <class name="com.score.apiTests.BetaPageTest"/>
+        </classes>
+    </test>
+</suite>

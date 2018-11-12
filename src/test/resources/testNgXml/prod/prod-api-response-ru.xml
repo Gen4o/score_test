@@ -1,0 +1,26 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Suite regression API RU domen" verbose="1" >
+
+
+
+    <test name="Api tests prod ru" >
+        <parameter name="domen" value="https://777score.ru"/>
+        <classes>
+            <class name="com.score.apiTests.ApiTest777Football"/>
+            <class name="com.score.apiTests.ApiTest777Basketball"/>
+            <class name="com.score.apiTests.ApiTest777Tennis"/>
+            <class name="com.score.apiTests.ApiTest777Hockey" />
+        </classes>
+    </test>
+
+
+
+    <test name="777score pages prod ru" >
+        <parameter name="domen" value="https://777score.ru"/>
+        <classes>
+            <class name="com.score.apiTests.Pages777scoreTest"/>
+        </classes>
+    </test>
+
+</suite>
+

@@ -1,0 +1,301 @@
+{"definitions": {},
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "teams_schedules.json",
+  "type": "array",
+  "additionalItems": false,
+  "uniqueItems": true,
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "tournament": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "category": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "name": {
+                "type": "string"
+              },
+              "country": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "iso": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "iso"
+                ]
+              },
+              "slug": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "name",
+              "country",
+              "slug"
+            ]
+          },
+          "uniqueTournament": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "slug": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "slug"
+            ]
+          },
+          "id": {
+            "type": "integer"
+          },
+          "fullName": {
+            "type": "string"
+          },
+          "uniqueTournamentName": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "iso": {
+            "type": "string"
+          },
+          "slug": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "category",
+          "uniqueTournament",
+          "id",
+          "fullName",
+          "uniqueTournamentName",
+          "name",
+          "iso",
+          "slug"
+        ]
+      },
+      "season": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          },
+          "year": {
+            "type": "string"
+          },
+          "slug": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "year",
+          "slug"
+        ]
+      },
+      "matchNumber": {
+        "type": ["null","integer"]
+      },
+      "matchOrder": {
+        "type": "null"
+      },
+      "ht": {
+        "type": "null"
+      },
+      "homeTeam": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "betradarId": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          },
+          "shortName": {
+            "type": "string"
+          },
+          "logo": {
+            "type": "boolean"
+          },
+          "slug": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "betradarId",
+          "name",
+          "shortName",
+          "logo",
+          "slug"
+        ]
+      },
+      "awayTeam": {
+        "$ref":"#/items/properties/homeTeam"
+        },
+      "cupBlock": {
+        "type": ["null","object"],
+        "additionalProperties": false,
+        "properties": {
+          "cupRound": {
+            "type": ["object","null"],
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "description": {
+                "type": ["string","null"]
+              }
+            },
+            "required": [
+              "id",
+              "description"
+            ]
+          },
+          "participants": {
+            "type": "array",
+            "additionalItems": false,
+            "uniqueItems": true,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "team": {
+                  "$ref":"#/items/properties/homeTeam"
+                },
+                "id": {
+                  "type": "integer"
+                },
+                "winner": {
+                  "type": ["boolean","null"]
+                }
+              },
+              "required": [
+                "team",
+                "id",
+                "winner"
+              ]
+            }
+          },
+          "matchesInRound": {
+            "type": ["integer","null"]
+          }
+        },
+        "required": [
+          "cupRound",
+          "participants",
+          "matchesInRound"
+        ]
+      },
+      "firstScore": {
+        "type": "string"
+      },
+      "redCardsForHomeTeam": {
+        "type": "null"
+      },
+      "redCardsForAwayTeam": {
+        "type": "null"
+      },
+      "shootout": {
+        "type": "null"
+      },
+      "winner": {
+        "type": "null"
+      },
+      "id": {
+        "type": "integer"
+      },
+      "betradarId": {
+        "type": ["integer","null"]
+      },
+      "dateOfMatch": {
+        "type": "string"
+      },
+      "roundNumber": {
+        "type": ["integer","null"]
+      },
+      "canceled": {
+        "type": "null"
+      },
+      "postponed": {
+        "type": "null"
+      },
+      "comment": {
+        "type": ["null","string"]
+      },
+      "ft": {
+        "type": "null"
+      },
+      "final": {
+        "type": "null"
+      },
+      "ot": {
+        "type": "null"
+      },
+      "slug": {
+        "type": "string"
+      },
+      "numericId": {
+        "type": "string"
+      },
+      "s": {
+        "type": "integer"
+      }
+    },
+    "required": [
+      "tournament",
+      "season",
+      "matchNumber",
+      "matchOrder",
+      "ht",
+      "homeTeam",
+      "awayTeam",
+      "cupBlock",
+      "firstScore",
+      "redCardsForHomeTeam",
+      "redCardsForAwayTeam",
+      "shootout",
+      "winner",
+      "id",
+      "betradarId",
+      "dateOfMatch",
+      "roundNumber",
+      "canceled",
+      "postponed",
+      "comment",
+      "ft",
+      "final",
+      "ot",
+      "slug",
+      "numericId",
+      "s"
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Suite regression API structure" verbose="1" >
+    <test name="777score API structure tests" >
+        <classes>
+            <class name="com.score.apistructure.ApiStructureCompareFootballTest" />
+        </classes>
+    </test>
+
+</suite>

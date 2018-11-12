@@ -1,0 +1,125 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "tournament_overunder_stat.json",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "overUnderStatistics": {
+      "type": "array",
+      "additionalItems": false,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "team": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "name": {
+                "type": "string"
+              },
+              "slug": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "name",
+              "slug"
+            ]
+          },
+          "tournamentId": {
+            "type": "integer"
+          },
+          "tournamentName": {
+            "type": "string"
+          },
+          "isGroup": {
+            "type": "boolean"
+          },
+          "over": {
+            "type": "integer"
+          },
+          "under": {
+            "type": "integer"
+          },
+          "result_type": {
+            "type": "string"
+          },
+          "goals": {
+            "type": "string"
+          },
+          "matches": {
+            "type": "integer"
+          },
+          "goals_total": {
+            "type": "string"
+          },
+          "average_goals": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "team",
+          "tournamentId",
+          "tournamentName",
+          "isGroup",
+          "over",
+          "under",
+          "result_type",
+          "goals",
+          "matches",
+          "goals_total",
+          "average_goals"
+        ]
+      }
+    },
+    "lastMatches": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "home": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "id": "sunbear",
+            "title": "Empty Object",
+            "description": "This accepts anything, as long as it's valid JSON."
+          }
+        },
+        "total": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "id": "polarbear",
+            "title": "Empty Object",
+            "description": "This accepts anything, as long as it's valid JSON."
+          }
+        },
+        "away": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "id": "louisianabear",
+            "title": "Empty Object",
+            "description": "This accepts anything, as long as it's valid JSON."
+          }
+        }
+      },
+      "required": [
+        "home",
+        "total",
+        "away"
+      ]
+    }
+  },
+  "required": [
+    "overUnderStatistics",
+    "lastMatches"
+  ]
+}

@@ -1,0 +1,330 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://777score.com/api/v1/football/tournaments/2/season/3644/leaguetable",
+  "items": {
+    "additionalProperties": false,
+    "id": "/items",
+    "properties": {
+      "change": {
+        "id": "/items/properties/change",
+        "type": "integer"
+      },
+      "draw": {
+        "id": "/items/properties/draw",
+        "type": "integer"
+      },
+      "futureMatches": {
+        "id": "/items/properties/futureMatches",
+        "items": {
+          "additionalProperties": false,
+          "id": "/items/properties/futureMatches/items",
+          "properties": {
+            "awayTeam": {
+              "additionalProperties": false,
+              "id": "/items/properties/futureMatches/items/properties/awayTeam",
+              "properties": {
+                "id": {
+                  "id": "/items/properties/futureMatches/items/properties/awayTeam/properties/id",
+                  "type": "integer"
+                },
+                "name": {
+                  "id": "/items/properties/futureMatches/items/properties/awayTeam/properties/name",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "name"
+              ],
+              "type": "object"
+            },
+            "dateOfMatch": {
+              "id": "/items/properties/futureMatches/items/properties/dateOfMatch",
+              "format": "date-time",
+              "type": "string"
+            },
+            "final": {
+              "id": "/items/properties/futureMatches/items/properties/final",
+              "type": "null"
+            },
+            "goals_total": {
+              "id": "/items/properties/futureMatches/items/properties/goals_total",
+              "type": "null"
+            },
+            "homeTeam": {
+              "additionalProperties": false,
+              "id": "/items/properties/futureMatches/items/properties/homeTeam",
+              "properties": {
+                "id": {
+                  "id": "/items/properties/futureMatches/items/properties/homeTeam/properties/id",
+                  "type": "integer"
+                },
+                "name": {
+                  "id": "/items/properties/futureMatches/items/properties/homeTeam/properties/name",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "name"
+              ],
+              "type": "object"
+            },
+            "matchID": {
+              "id": "/items/properties/futureMatches/items/properties/matchID",
+              "type": "integer"
+            },
+            "resultOfTeam": {
+              "id": "/items/properties/futureMatches/items/properties/resultOfTeam",
+              "type": "integer"
+            },
+            "slug": {
+              "id": "/items/properties/futureMatches/items/properties/slug",
+              "type": "string"
+            }
+          },
+          "required": [
+            "homeTeam",
+            "matchID",
+            "slug",
+            "awayTeam",
+            "resultOfTeam",
+            "dateOfMatch",
+            "goals_total",
+            "final"
+          ],
+          "type": "object"
+        },
+        "maxItems": 2,
+        "type": "array"
+      },
+      "goalDiff": {
+        "id": "/items/properties/goalDiff",
+        "type": "integer"
+      },
+      "goalsAgainst": {
+        "id": "/items/properties/goalsAgainst",
+        "type": "integer"
+      },
+      "goalsFor": {
+        "id": "/items/properties/goalsFor",
+        "type": "integer"
+      },
+      "goalsTotal": {
+        "id": "/items/properties/goalsTotal",
+        "type": "string"
+      },
+      "lastMatches": {
+        "id": "/items/properties/lastMatches",
+        "maxItems": 5,
+        "uniqueItems": true,
+        "type": "array",
+        "items": {
+          "additionalProperties": false,
+          "id": "/items/properties/lastMatches/items",
+          "properties": {
+            "awayTeam": {
+              "additionalProperties": false,
+              "id": "/items/properties/lastMatches/items/properties/awayTeam",
+              "properties": {
+                "id": {
+                  "id": "/items/properties/lastMatches/items/properties/awayTeam/properties/id",
+                  "type": "integer"
+                },
+                "name": {
+                  "id": "/items/properties/lastMatches/items/properties/awayTeam/properties/name",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "name"
+              ],
+              "type": "object"
+            },
+            "dateOfMatch": {
+              "id": "/items/properties/lastMatches/items/properties/dateOfMatch",
+              "format": "date-time",
+              "type": "string"
+            },
+            "final": {
+              "id": "/items/properties/lastMatches/items/properties/final",
+              "type": "string"
+            },
+            "goals_total": {
+              "id": "/items/properties/lastMatches/items/properties/goals_total",
+              "type": "integer"
+            },
+            "homeTeam": {
+              "additionalProperties": false,
+              "id": "/items/properties/lastMatches/items/properties/homeTeam",
+              "properties": {
+                "id": {
+                  "id": "/items/properties/lastMatches/items/properties/homeTeam/properties/id",
+                  "type": "integer"
+                },
+                "name": {
+                  "id": "/items/properties/lastMatches/items/properties/homeTeam/properties/name",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "name"
+              ],
+              "type": "object"
+            },
+            "matchID": {
+              "id": "/items/properties/lastMatches/items/properties/matchID",
+              "type": "integer"
+            },
+            "resultOfTeam": {
+              "id": "/items/properties/lastMatches/items/properties/resultOfTeam",
+              "type": "integer"
+            },
+            "slug": {
+              "id": "/items/properties/lastMatches/items/properties/slug",
+              "type": "string"
+            }
+          },
+          "required": [
+            "homeTeam",
+            "matchID",
+            "slug",
+            "awayTeam",
+            "resultOfTeam",
+            "dateOfMatch",
+            "goals_total",
+            "final"
+          ],
+          "type": "object"
+        }
+      },
+      "loss": {
+        "id": "/items/properties/loss",
+        "type": "integer"
+      },
+      "matches": {
+        "id": "/items/properties/matches",
+        "type": "integer"
+      },
+      "points": {
+        "id": "/items/properties/points",
+        "type": "integer"
+      },
+      "position": {
+        "id": "/items/properties/position",
+        "type": "integer"
+      },
+      "promotion": {
+        "additionalProperties": false,
+        "id": "/items/properties/promotion",
+        "properties": {
+          "color": {
+            "id": "/items/properties/promotion/properties/color",
+            "type": "string"
+          },
+          "id": {
+            "id": "/items/properties/promotion/properties/id",
+            "type": "integer"
+          },
+          "name": {
+            "id": "/items/properties/promotion/properties/name",
+            "type": "string"
+          }
+        },
+        "required": [
+          "color",
+          "id",
+          "name"
+        ],
+        "type": ["object","null"]
+      },
+      "resultType": {
+        "id": "/items/properties/resultType",
+        "type": "string"
+      },
+      "round": {
+        "id": "/items/properties/round",
+        "type": "integer"
+      },
+      "sortPosition": {
+        "id": "/items/properties/sortPosition",
+        "type": "integer"
+      },
+      "team": {
+        "additionalProperties": false,
+        "id": "/items/properties/team",
+        "properties": {
+          "id": {
+            "id": "/items/properties/team/properties/id",
+            "type": "integer"
+          },
+          "name": {
+            "id": "/items/properties/team/properties/name",
+            "type": "string"
+          },
+          "slug": {
+            "id": "/items/properties/team/properties/slug",
+            "type": "string"
+          }
+        },
+        "required": [
+          "slug",
+          "id",
+          "name"
+        ],
+        "type": "object"
+      },
+      "tendencyTotal": {
+        "id": "/items/properties/tendencyTotal",
+        "type": [
+          "integer",
+          "null"
+        ]
+      },
+      "win": {
+        "id": "/items/properties/win",
+        "type": "integer"
+      },
+      "tournamentId": {
+        "type":
+        "integer"
+      },
+      "tournamentName": {
+        "type":
+        "string"
+      },
+      "isGroup": {
+        "type":
+        "boolean"
+      }
+    },
+    "required": [
+      "loss",
+      "draw",
+      "goalsTotal",
+      "matches",
+      "win",
+      "lastMatches",
+      "team",
+      "tendencyTotal",
+      "goalsFor",
+      "resultType",
+      "points",
+      "goalsAgainst",
+      "futureMatches",
+      "isGroup",
+      "tournamentId",
+      "tournamentName",
+      "sortPosition",
+      "goalDiff",
+      "position",
+      "promotion",
+      "round",
+      "change"
+    ],
+    "type": ["object", "null"]
+  },
+  "type": "array"
+}

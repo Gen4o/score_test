@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {},
+  "id": "https://777score.com/api/v1/football/categories/list",
+  "items": {
+    "id": "/items",
+    "properties": {
+      "country": {
+        "id": "/items/properties/country",
+               "properties": {
+                   "iso": {
+                       "id": "/items/properties/country/properties/iso",
+                       "title": "The iso schema",
+                       "type": "string"
+                     }
+                 },
+              "required": [
+                   "iso"
+                 ],
+               "type": "object"
+             },
+           "id": {
+               "id": "/items/properties/id",
+               "title": "The id schema",
+               "type": "integer"
+             },
+           "name": {
+               "id": "/items/properties/name",
+               "title": "The name schema",
+               "type": "string"
+             },
+           "slug": {
+               "id": "/items/properties/slug",
+               "title": "The slug schema",
+               "type": "string"
+             }
+         },
+       "required": [
+           "country",
+           "slug",
+           "id",
+           "name"
+         ],
+       "type": "object"
+     },
+     "type": "array"
+ }

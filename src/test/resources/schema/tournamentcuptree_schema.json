@@ -1,0 +1,384 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://example.com/example.json",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "id": "/properties/id",
+      "type": "integer"
+    },
+    "currentCupRound": {
+      "id": "/properties/currentCupRound",
+      "type": "integer"
+    },
+    "cupRoundsOrdered": {
+      "id": "/properties/cupRoundsOrdered",
+      "type": "array",
+      "additionalItems": false,
+      "uniqueItems": true,
+      "items": {
+        "id": "/properties/cupRoundsOrdered/items",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "cupBlocks": {
+            "id": "/properties/cupRoundsOrdered/items/properties/cupBlocks",
+            "type": "array",
+            "additionalItems": false,
+            "uniqueItems": true,
+            "items": {
+              "id": "/properties/cupRoundsOrdered/items/properties/cupBlocks/items",
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "participants": {
+                  "id": "/properties/cupRoundsOrdered/items/properties/cupBlocks/items/properties/participants",
+                  "type": "array",
+                  "additionalItems": false,
+                  "uniqueItems": true,
+                  "items": {
+                    "id": "/properties/cupRoundsOrdered/items/properties/cupBlocks/items/properties/participants/items",
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "team": {
+                        "id": "/properties/cupRoundsOrdered/items/properties/cupBlocks/items/properties/participants/items/properties/team",
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                          "id": {
+                            "id": "/properties/cupRoundsOrdered/items/properties/cupBlocks/items/properties/participants/items/properties/team/properties/id",
+                            "type": "integer"
+                          },
+                          "betradarId": {
+                            "id": "/properties/cupRoundsOrdered/items/properties/cupBlocks/items/properties/participants/items/properties/team/properties/betradarId",
+                            "type": "integer"
+                          },
+                          "name": {
+                            "id": "/properties/cupRoundsOrdered/items/properties/cupBlocks/items/properties/participants/items/properties/team/properties/name",
+                            "type": "string"
+                          },
+                          "shortName": {
+                            "id": "/properties/cupRoundsOrdered/items/properties/cupBlocks/items/properties/participants/items/properties/team/properties/shortName",
+                            "type": "string"
+                          },
+                          "country": {
+                            "id": "/properties/cupRoundsOrdered/items/properties/cupBlocks/items/properties/participants/items/properties/team/properties/country",
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                              "id": {
+                                "id": "/properties/cupRoundsOrdered/items/properties/cupBlocks/items/properties/participants/items/properties/team/properties/country/properties/id",
+                                "type": "integer"
+                              },
+                              "iso": {
+                                "id": "/properties/cupRoundsOrdered/items/properties/cupBlocks/items/properties/participants/items/properties/team/properties/country/properties/iso",
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "id",
+                              "iso"
+                            ]
+                          },
+                          "logo": {
+                            "id": "/properties/cupRoundsOrdered/items/properties/cupBlocks/items/properties/participants/items/properties/team/properties/logo",
+                            "type": "boolean"
+                          },
+                          "slug": {
+                            "id": "/properties/cupRoundsOrdered/items/properties/cupBlocks/items/properties/participants/items/properties/team/properties/slug",
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "id",
+                          "betradarId",
+                          "name",
+                          "shortName",
+                          "country",
+                          "logo",
+                          "slug"
+                        ]
+                      },
+                      "id": {
+                        "id": "/properties/cupRoundsOrdered/items/properties/cupBlocks/items/properties/participants/items/properties/id",
+                        "type": ["null","integer"]
+                      },
+                      "order": {
+                        "id": "/properties/cupRoundsOrdered/items/properties/cupBlocks/items/properties/participants/items/properties/order",
+                        "type": ["null","integer"]
+                      },
+                      "sourceBlockId": {
+                        "id": "/properties/cupRoundsOrdered/items/properties/cupBlocks/items/properties/participants/items/properties/sourceBlockId",
+                        "type": ["null","integer"]
+                      },
+                      "winner": {
+                        "id": "/properties/cupRoundsOrdered/items/properties/cupBlocks/items/properties/participants/items/properties/winner",
+                        "type": "boolean"
+                      }
+                    },
+                    "required": [
+                      "team",
+                      "id",
+                      "order",
+                      "sourceBlockId",
+                      "winner"
+                    ]
+                  }
+                },
+                "matches": {
+                  "id": "/properties/cupRoundsOrdered/items/properties/cupBlocks/items/properties/matches",
+                  "type": "array",
+                  "additionalItems": false,
+                  "uniqueItems": true,
+                  "items": {
+                    "id": "/properties/cupRoundsOrdered/items/properties/cupBlocks/items/properties/matches/items",
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "matchNumber": {
+                        "id": "/properties/cupRoundsOrdered/items/properties/cupBlocks/items/properties/matches/items/properties/matchNumber",
+                        "type": "integer"
+                      },
+                      "matchOrder": {
+                        "id": "/properties/cupRoundsOrdered/items/properties/cupBlocks/items/properties/matches/items/properties/matchOrder",
+                        "type": "null"
+                      },
+                      "homeTeam": {
+                        "id": "/properties/cupRoundsOrdered/items/properties/cupBlocks/items/properties/matches/items/properties/homeTeam",
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                          "id": {
+                            "id": "/properties/cupRoundsOrdered/items/properties/cupBlocks/items/properties/matches/items/properties/homeTeam/properties/id",
+                            "type": "integer"
+                          },
+                          "betradarId": {
+                            "id": "/properties/cupRoundsOrdered/items/properties/cupBlocks/items/properties/matches/items/properties/homeTeam/properties/betradarId",
+                            "type": ["integer","null"]
+                          },
+                          "name": {
+                            "id": "/properties/cupRoundsOrdered/items/properties/cupBlocks/items/properties/matches/items/properties/homeTeam/properties/name",
+                            "type": "string"
+                          },
+                          "shortName": {
+                            "id": "/properties/cupRoundsOrdered/items/properties/cupBlocks/items/properties/matches/items/properties/homeTeam/properties/shortName",
+                            "type": "string"
+                          },
+                          "country": {
+                            "id": "/properties/cupRoundsOrdered/items/properties/cupBlocks/items/properties/matches/items/properties/homeTeam/properties/country",
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                              "id": {
+                                "id": "/properties/cupRoundsOrdered/items/properties/cupBlocks/items/properties/matches/items/properties/homeTeam/properties/country/properties/id",
+                                "type": "integer"
+                              },
+                              "iso": {
+                                "id": "/properties/cupRoundsOrdered/items/properties/cupBlocks/items/properties/matches/items/properties/homeTeam/properties/country/properties/iso",
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "id",
+                              "iso"
+                            ]
+                          },
+                          "logo": {
+                            "id": "/properties/cupRoundsOrdered/items/properties/cupBlocks/items/properties/matches/items/properties/homeTeam/properties/logo",
+                            "type": "boolean"
+                          },
+                          "slug": {
+                            "id": "/properties/cupRoundsOrdered/items/properties/cupBlocks/items/properties/matches/items/properties/homeTeam/properties/slug",
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "id",
+                          "betradarId",
+                          "name",
+                          "shortName",
+                          "country",
+                          "logo",
+                          "slug"
+                        ]
+                      },
+                      "awayTeam": {
+                        "id": "/properties/cupRoundsOrdered/items/properties/cupBlocks/items/properties/matches/items/properties/awayTeam",
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                          "id": {
+                            "id": "/properties/cupRoundsOrdered/items/properties/cupBlocks/items/properties/matches/items/properties/awayTeam/properties/id",
+                            "type": "integer"
+                          },
+                          "betradarId": {
+                            "id": "/properties/cupRoundsOrdered/items/properties/cupBlocks/items/properties/matches/items/properties/awayTeam/properties/betradarId",
+                            "type": ["integer","null"]
+                          },
+                          "name": {
+                            "id": "/properties/cupRoundsOrdered/items/properties/cupBlocks/items/properties/matches/items/properties/awayTeam/properties/name",
+                            "type": "string"
+                          },
+                          "shortName": {
+                            "id": "/properties/cupRoundsOrdered/items/properties/cupBlocks/items/properties/matches/items/properties/awayTeam/properties/shortName",
+                            "type": "string"
+                          },
+                          "country": {
+                            "id": "/properties/cupRoundsOrdered/items/properties/cupBlocks/items/properties/matches/items/properties/awayTeam/properties/country",
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                              "id": {
+                                "id": "/properties/cupRoundsOrdered/items/properties/cupBlocks/items/properties/matches/items/properties/awayTeam/properties/country/properties/id",
+                                "type": "integer"
+                              },
+                              "iso": {
+                                "id": "/properties/cupRoundsOrdered/items/properties/cupBlocks/items/properties/matches/items/properties/awayTeam/properties/country/properties/iso",
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "id",
+                              "iso"
+                            ]
+                          },
+                          "logo": {
+                            "id": "/properties/cupRoundsOrdered/items/properties/cupBlocks/items/properties/matches/items/properties/awayTeam/properties/logo",
+                            "type": "boolean"
+                          },
+                          "slug": {
+                            "id": "/properties/cupRoundsOrdered/items/properties/cupBlocks/items/properties/matches/items/properties/awayTeam/properties/slug",
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "id",
+                          "betradarId",
+                          "name",
+                          "shortName",
+                          "country",
+                          "logo",
+                          "slug"
+                        ]
+                      },
+                      "shootout": {
+                        "id": "/properties/cupRoundsOrdered/items/properties/cupBlocks/items/properties/matches/items/properties/shootout",
+                        "type": "null"
+                      },
+                      "id": {
+                        "id": "/properties/cupRoundsOrdered/items/properties/cupBlocks/items/properties/matches/items/properties/id",
+                        "type": "integer"
+                      },
+                      "dateOfMatch": {
+                        "id": "/properties/cupRoundsOrdered/items/properties/cupBlocks/items/properties/matches/items/properties/dateOfMatch",
+                        "type": "string"
+                      },
+                      "roundNumber": {
+                        "id": "/properties/cupRoundsOrdered/items/properties/cupBlocks/items/properties/matches/items/properties/roundNumber",
+                        "type": ["integer","null"]
+                      },
+                      "cupRound": {
+                        "id": "/properties/cupRoundsOrdered/items/properties/cupBlocks/items/properties/matches/items/properties/cupRound",
+                        "type": ["null","integer"]
+                      },
+                      "final": {
+                        "id": "/properties/cupRoundsOrdered/items/properties/cupBlocks/items/properties/matches/items/properties/final",
+                        "type": ["string","null"]
+                      },
+                      "slug": {
+                        "id": "/properties/cupRoundsOrdered/items/properties/cupBlocks/items/properties/matches/items/properties/slug",
+                        "type": "string"
+                      },
+                      "numericId": {
+                        "id": "/properties/cupRoundsOrdered/items/properties/cupBlocks/items/properties/matches/items/properties/numericId",
+                        "type": "string"
+                      },
+                      "s": {
+                        "id": "/properties/cupRoundsOrdered/items/properties/cupBlocks/items/properties/matches/items/properties/s",
+                        "type": "integer"
+                      }
+                    },
+                    "required": [
+                      "matchNumber",
+                      "matchOrder",
+                      "homeTeam",
+                      "awayTeam",
+                      "id",
+                      "dateOfMatch",
+                      "roundNumber",
+                      "cupRound",
+                      "final",
+                      "slug",
+                      "numericId",
+                      "s"
+                    ]
+                  }
+                },
+                "id": {
+                  "id": "/properties/cupRoundsOrdered/items/properties/cupBlocks/items/properties/id",
+                  "type": ["null","integer"]
+                },
+                "blockId": {
+                  "id": "/properties/cupRoundsOrdered/items/properties/cupBlocks/items/properties/blockId",
+                  "type": ["null","integer"]
+                },
+                "finished": {
+                  "id": "/properties/cupRoundsOrdered/items/properties/cupBlocks/items/properties/finished",
+                  "type": ["null","boolean"]
+                },
+                "matchesInRound": {
+                  "id": "/properties/cupRoundsOrdered/items/properties/cupBlocks/items/properties/matchesInRound",
+                  "type": ["null","integer"]
+                },
+                "order": {
+                  "id": "/properties/cupRoundsOrdered/items/properties/cupBlocks/items/properties/order",
+                  "type": ["null","integer"]
+                },
+                "result": {
+                  "id": "/properties/cupRoundsOrdered/items/properties/cupBlocks/items/properties/result",
+                  "type": ["null","string"]
+                }
+              },
+              "required": [
+                "participants",
+                "matches",
+                "id",
+                "blockId",
+                "finished",
+                "matchesInRound",
+                "order",
+                "result"
+              ]
+            }
+          },
+          "id": {
+            "id": "/properties/cupRoundsOrdered/items/properties/id",
+            "type": ["null","integer"]
+          },
+          "description": {
+            "id": "/properties/cupRoundsOrdered/items/properties/description",
+            "type": "string"
+          },
+          "order": {
+            "id": "/properties/cupRoundsOrdered/items/properties/order",
+            "type": ["null","integer"]
+          }
+        },
+        "required": [
+          "cupBlocks",
+          "id",
+          "description",
+          "order"
+        ]
+      }
+    }
+  },
+  "required": [
+    "id",
+    "currentCupRound",
+    "cupRoundsOrdered"
+  ]
+}

@@ -1,0 +1,132 @@
+{  "definitions": {},
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "player_career.json",
+  "type": ["array","null"],
+  "additionalItems": false,
+  "uniqueItems": true,
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "team": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "betradarId": {
+            "type": ["integer","null"]
+          },
+          "name": {
+            "type": "string"
+          },
+          "shortName": {
+            "type": ["string","null"]
+          },
+          "slug": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "betradarId",
+          "name",
+          "shortName",
+          "slug"
+        ]
+      },
+      "season": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "uniqueTournament": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "category": {
+                "type": ["object","null"],
+                "additionalProperties": false,
+                "properties": {
+                  "country": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "iso": {
+                        "type": "string"
+                      },
+                      "ioc": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "iso",
+                      "ioc"
+                    ]
+                  },
+                  "slug": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "country",
+                  "slug"
+                ]
+              },
+              "dataExist": {
+                "type": "boolean"
+              },
+              "id": {
+                "type": "integer"
+              },
+              "name": {
+                "type": "string"
+              },
+              "slug": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "category",
+              "dataExist",
+              "id",
+              "name",
+              "slug"
+            ]
+          },
+          "year": {
+            "type": ["string","null"]
+          }
+        },
+        "required": [
+          "uniqueTournament",
+          "year"
+        ]
+      },
+      "totalMatches": {
+        "type": ["integer" ,"null"]
+      },
+      "yellowCardsInTournament": {
+        "type": ["integer" ,"null"]
+      },
+      "redCardsInTournament": {
+        "type": ["integer" ,"null"]
+      },
+      "goalsInTournament": {
+        "type": ["integer" ,"null"]
+      },
+      "assistsInTournament": {
+        "type": ["integer" ,"null"]
+      }
+    },
+    "required": [
+      "team",
+      "season",
+      "totalMatches",
+      "yellowCardsInTournament",
+      "redCardsInTournament",
+      "goalsInTournament",
+      "assistsInTournament"
+    ]
+  }
+}

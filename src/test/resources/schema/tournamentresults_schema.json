@@ -1,0 +1,246 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "additionalProperties": false,
+  "definitions": {},
+  "id": "https://777score.com/api/v1/tournaments/2/season/3644/results",
+  "properties": {
+    "matches": {
+      "additionalItems": false,
+      "id": "/properties/matches",
+      "items": {
+        "additionalProperties": false,
+        "id": "/properties/matches/items",
+        "properties": {
+          "awayTeam": {
+            "additionalProperties": false,
+            "id": "/properties/matches/items/properties/awayTeam",
+            "properties": {
+              "betradarId": {
+                "id": "/properties/matches/items/properties/awayTeam/properties/betradarId",
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "id": {
+                "id": "/properties/matches/items/properties/awayTeam/properties/id",
+                "type": "integer"
+              },
+              "logo": {
+                "id": "/properties/matches/items/properties/awayTeam/properties/logo",
+                "type": "boolean"
+              },
+              "name": {
+                "id": "/properties/matches/items/properties/awayTeam/properties/name",
+                "type": "string"
+              },
+              "shortName": {
+                "id": "/properties/matches/items/properties/awayTeam/properties/shortName",
+                "type": "string"
+              },
+              "slug": {
+                "id": "/properties/matches/items/properties/awayTeam/properties/slug",
+                "type": "string"
+              }
+            },
+            "required": [
+              "name",
+              "id",
+              "logo",
+              "shortName",
+              "slug",
+              "betradarId"
+            ],
+            "type": "object"
+          },
+          "betradarId": {
+            "id": "/properties/matches/items/properties/betradarId",
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "canceled": {
+            "id": "/properties/matches/items/properties/canceled",
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "comment": {
+            "id": "/properties/matches/items/properties/comment",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "cupBlock": {
+            "id": "/properties/matches/items/properties/cupBlock",
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "dateOfMatch": {
+            "id": "/properties/matches/items/properties/dateOfMatch",
+            "type": "string"
+          },
+          "final": {
+            "id": "/properties/matches/items/properties/final",
+            "type": "string"
+          },
+          "firstScore": {
+            "id": "/properties/matches/items/properties/firstScore",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "ft": {
+            "id": "/properties/matches/items/properties/ft",
+            "type": "string"
+          },
+          "homeTeam": {
+            "additionalProperties": false,
+            "id": "/properties/matches/items/properties/homeTeam",
+            "properties": {
+              "betradarId": {
+                "id": "/properties/matches/items/properties/homeTeam/properties/betradarId",
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "id": {
+                "id": "/properties/matches/items/properties/homeTeam/properties/id",
+                "type": "integer"
+              },
+              "logo": {
+                "id": "/properties/matches/items/properties/homeTeam/properties/logo",
+                "type": "boolean"
+              },
+              "name": {
+                "id": "/properties/matches/items/properties/homeTeam/properties/name",
+                "type": "string"
+              },
+              "shortName": {
+                "id": "/properties/matches/items/properties/homeTeam/properties/shortName",
+                "type": "string"
+              },
+              "slug": {
+                "id": "/properties/matches/items/properties/homeTeam/properties/slug",
+                "type": "string"
+              }
+            },
+            "required": [
+              "name",
+              "id",
+              "logo",
+              "shortName",
+              "slug",
+              "betradarId"
+            ],
+            "type": "object"
+          },
+          "ht": {
+            "id": "/properties/matches/items/properties/ht",
+            "type": "string"
+          },
+          "id": {
+            "id": "/properties/matches/items/properties/id",
+            "type": "integer"
+          },
+          "numericId": {
+            "id": "/properties/matches/items/properties/numericId",
+            "type": "string"
+          },
+          "ot": {
+            "id": "/properties/matches/items/properties/ot",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "postponed": {
+            "id": "/properties/matches/items/properties/postponed",
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "redCardsForAwayTeam": {
+            "id": "/properties/matches/items/properties/redCardsForAwayTeam",
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "redCardsForHomeTeam": {
+            "id": "/properties/matches/items/properties/redCardsForHomeTeam",
+            "type": [
+              "string",
+              "integer",
+              "null"
+            ]
+          },
+          "roundNumber": {
+            "id": "/properties/matches/items/properties/roundNumber",
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "s": {
+            "id": "/properties/matches/items/properties/s",
+            "type": "integer"
+          },
+          "slug": {
+            "id": "/properties/matches/items/properties/slug",
+            "type": "string"
+          },
+          "winner": {
+            "id": "/properties/matches/items/properties/winner",
+            "type": [
+              "boolean",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "comment",
+          "slug",
+          "ot",
+          "ft",
+          "canceled",
+          "roundNumber",
+          "numericId",
+          "homeTeam",
+          "winner",
+          "redCardsForAwayTeam",
+          "firstScore",
+          "final",
+          "awayTeam",
+          "s",
+          "ht",
+          "redCardsForHomeTeam",
+          "dateOfMatch",
+          "postponed",
+          "id",
+          "betradarId",
+          "cupBlock"
+        ],
+        "type": ["object","null"]
+      },
+      "type": "array"
+    },
+    "total": {
+      "id": "/properties/total",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "matches",
+    "total"
+  ],
+  "type": "object"
+}

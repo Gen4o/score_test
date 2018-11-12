@@ -1,0 +1,111 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "goalscorers",
+  "type": "array",
+  "additionalItems": false,
+  "uniqueItems": true,
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "soccerPlayer": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "logo": {
+            "type": ["null","boolean"]
+          },
+          "id": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          },
+          "position": {
+            "type": "string"
+          },
+          "nationality": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "iso": {
+                "type": "string"
+              },
+              "ioc": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "iso",
+              "ioc",
+              "name"
+            ]
+          },
+          "slug": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "logo",
+          "id",
+          "name",
+          "position",
+          "nationality",
+          "slug"
+        ]
+      },
+      "soccerTeam": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          },
+          "shortName": {
+            "type": ["string","null"]
+          },
+          "logo": {
+            "type": ["boolean","null"]
+          },
+          "slug": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "shortName",
+          "logo",
+          "slug"
+        ]
+      },
+      "id": {
+        "type": "integer"
+      },
+      "goalsInTournament": {
+        "type": ["integer","null"]
+      },
+      "assistsInTournament": {
+        "type": ["integer","null"]
+      }
+    },
+    "required": [
+      "soccerPlayer",
+      "soccerTeam",
+      "id",
+      "goalsInTournament",
+      "assistsInTournament"
+    ]
+  }
+}

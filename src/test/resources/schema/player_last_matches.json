@@ -1,0 +1,233 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "player_last_matches.json",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "matches": {
+      "type": "array",
+      "additionalItems": false,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "match": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "tournament": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "category": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "country": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                          "iso": {
+                            "type": "string"
+                          },
+                          "ioc": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "iso",
+                          "ioc"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "name",
+                      "country"
+                    ]
+                  },
+                  "uniqueTournament": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "slug": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "slug"
+                    ]
+                  },
+                  "id": {
+                    "type": "integer"
+                  },
+                  "uniqueTournamentName": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "category",
+                  "uniqueTournament",
+                  "id",
+                  "uniqueTournamentName",
+                  "name"
+                ]
+              },
+              "homeTeam": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "id": {
+                    "type": "integer"
+                  },
+                  "betradarId": {
+                    "type": [
+                      "integer",
+                      "null"
+                    ]
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "shortName": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "logo": {
+                    "type": "boolean"
+                  },
+                  "slug": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "id",
+                  "betradarId",
+                  "name",
+                  "shortName",
+                  "logo",
+                  "slug"
+                ]
+              },
+              "awayTeam": {
+                "$ref": "#/properties/matches/items/properties/match/properties/homeTeam"
+              },
+              "teams": {
+                "type": "array",
+                "additionalItems": false,
+                "uniqueItems": true,
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "team": {
+                      "$ref": "#/properties/matches/items/properties/match/properties/homeTeam"
+                    }
+                  },
+                  "required": [
+                    "team"
+                  ]
+                }
+              },
+              "id": {
+                "type": "integer"
+              },
+              "dateOfMatch": {
+                "type": "string"
+              },
+              "ft": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "final": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "ot": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "slug": {
+                "type": "string"
+              },
+              "s": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "tournament",
+              "homeTeam",
+              "awayTeam",
+              "teams",
+              "id",
+              "dateOfMatch",
+              "ft",
+              "final",
+              "ot",
+              "slug",
+              "s"
+            ]
+          },
+          "playerParam": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "goalsByPlayer": {
+                "type": "null"
+              },
+              "cards": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "winner": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "goalsByPlayer",
+              "cards",
+              "winner"
+            ]
+          }
+        },
+        "required": [
+          "match",
+          "playerParam"
+        ]
+      }
+    },
+    "total": {
+      "id": "player_last_matches.json/properties/total",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "matches",
+    "total"
+  ]
+}

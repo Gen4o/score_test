@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="regression suite EN domen" verbose="1" >
+    <test name="ApiTests BetaEn" >
+        <parameter name="domen" value="https://beta.777score.com"/>
+        <classes>
+            <class name="com.score.apiTests.ApiTest777Football"/>
+            <class name="com.score.apiTests.ApiTest777Basketball"/>
+            <class name="com.score.apiTests.ApiTest777Tennis"/>
+            <class name="com.score.apiTests.ApiTest777Hockey" />
+        </classes>
+    </test>
+</suite>
+

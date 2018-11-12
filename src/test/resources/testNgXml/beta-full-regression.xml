@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Suite beta full regression" verbose="1" >
+  <suite-files>
+      <suite-file path="beta/beta-api-response-en.xml"></suite-file>
+      <suite-file path="beta/beta-page-response-en.xml"></suite-file>
+
+  </suite-files>
+</suite>

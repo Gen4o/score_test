@@ -1,0 +1,361 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "player_info.json",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "shirtNumber": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "preferredFoot": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "team": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "shortName": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "logo": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "slug": {
+          "type": "string"
+        },
+        "gender": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "shortName",
+        "logo",
+        "slug",
+        "gender"
+      ]
+    },
+    "playerInjuries": {
+      "type": "array",
+      "additionalItems": false,
+      "uniqueItems": true,
+      "items": {
+        "id": "mexicanbear",
+        "title": "Empty Object",
+        "description": "This accepts anything, as long as it's valid JSON."
+      }
+    },
+    "logo": {
+      "type": "null"
+    },
+    "injury": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "placeOfBirth": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "id": {
+      "type": "integer"
+    },
+    "name": {
+      "type": "string"
+    },
+    "fullName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "firstName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "position": {
+      "type": "string"
+    },
+    "weight": {
+      "type": [
+        "null",
+        "integer"
+      ]
+    },
+    "height": {
+      "type": [
+        "null",
+        "integer"
+      ]
+    },
+    "dateOfBirth": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "nationality": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "iso": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "alias": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "iso",
+        "name",
+        "alias"
+      ]
+    },
+    "slug": {
+      "type": "string"
+    },
+    "seoTextValue": {
+      "type": [
+        "null",
+        "boolean"
+      ]
+    },
+    "playerTeamNextMatch": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "tournament": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "uniqueTournamentName": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "category": {
+              "type": [
+                "object",
+                "null"
+              ],
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "country": {
+                  "type": [
+                    "object",
+                    "null"
+                  ],
+                  "properties": {
+                    "iso": {
+                      "type": "string"
+                    },
+                    "ioc": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "iso",
+                    "ioc"
+                  ]
+                }
+              },
+              "required": [
+                "id",
+                "name",
+                "country"
+              ]
+            },
+            "uniqueTournament": {
+              "type": [
+                "object",
+                "null"
+              ],
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "slug": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "slug"
+              ]
+            }
+          },
+          "required": [
+            "id",
+            "uniqueTournamentName",
+            "name",
+            "category",
+            "uniqueTournament"
+          ]
+        },
+        "homeTeam": {
+          "$id": "/properties/playerTeamNextMatch/properties/homeTeam",
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "betradarId": {
+              "type": ["integer","null"]
+            },
+            "name": {
+              "type": "string"
+            },
+            "shortName": {
+              "type": ["string","null"]
+            },
+            "logo": {
+              "type": "boolean"
+            },
+            "slug": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id",
+            "betradarId",
+            "name",
+            "shortName",
+            "logo",
+            "slug"
+          ]
+        },
+        "awayTeam": {
+          "$ref": "#/properties/playerTeamNextMatch/properties/homeTeam"
+        },
+        "teams": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "team": {
+                "$ref": "#/properties/playerTeamNextMatch/properties/homeTeam"
+              }
+            }
+          }
+        },
+        "id": {
+          "type": "integer"
+        },
+        "dateOfMatch": {
+          "type": "string"
+        },
+        "ft": {
+          "type": "null"
+        },
+        "final": {
+          "type": "null"
+        },
+        "ot": {
+          "type": "null"
+        },
+        "slug": {
+          "type": "string"
+        },
+        "s": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "tournament",
+        "homeTeam",
+        "awayTeam",
+        "teams",
+        "id",
+        "dateOfMatch",
+        "ft",
+        "final",
+        "ot",
+        "slug",
+        "s"
+      ]
+    }
+  },
+  "required": [
+    "shirtNumber",
+    "preferredFoot",
+    "team",
+    "playerInjuries",
+    "logo",
+    "injury",
+    "placeOfBirth",
+    "id",
+    "name",
+    "fullName",
+    "firstName",
+    "lastName",
+    "position",
+    "weight",
+    "height",
+    "dateOfBirth",
+    "nationality",
+    "slug",
+    "seoTextValue",
+    "playerTeamNextMatch"
+  ]
+}
